@@ -19,7 +19,7 @@ const LogoContainer = styled.div`
 `
 
 const Logo = styled.img`
-  height: 3rem;
+  height: 4rem;
 `
 
 const LogoText = styled.div`
@@ -43,6 +43,7 @@ type NavItemProps = {
 }
 
 const NavItem = styled.a`
+  position: relative;
   font-size: 1.7rem;
   font-weight: 600;
   color: ${(props: NavItemProps) => (props.active ? 'var(--primary)' : 'var(--main)')};
@@ -57,6 +58,18 @@ const NavItem = styled.a`
   :hover {
     color: var(--bg);
   }
+`
+
+const Underline = styled.div`
+  background-color: var(--bg);
+  width: calc(100% - 4rem);
+  height: 0.3rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -3.7rem);
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
 `
 
 const Address = styled.div`
@@ -77,7 +90,10 @@ const Header = () => {
         <LogoText>watermelon farm</LogoText>
       </LogoContainer>
       <NavContainer>
-        <NavItem active={location.pathname === '/'}>home</NavItem>
+        <NavItem active={location.pathname === '/'}>
+          home
+          <Underline />
+        </NavItem>
         <NavItem active={location.pathname === '/melon-market'}>melon market</NavItem>
         <NavItem active={location.pathname === '/seed-store'}>seed store</NavItem>
         <NavItem active={location.pathname === '/farms'}>farms</NavItem>
