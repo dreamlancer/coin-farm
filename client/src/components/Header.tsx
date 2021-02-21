@@ -61,7 +61,7 @@ const NavItem = styled.a`
 `
 
 const Underline = styled.div`
-  background-color: var(--bg);
+  background-color: var(--dark);
   width: calc(100% - 4rem);
   height: 0.3rem;
   position: absolute;
