@@ -2,7 +2,7 @@
 
 Watermelon Farm is an AMM and Yield Farm based on the Binance Smart Chain.  
 It aims to make many aspects of yield farming and liquidity mining more accessible users who are new to the space.  
-It does this by gamifying the mechanics of yield farming, and changing the language to me more understandable.
+It does this by gamifying the mechanics of yield farming, and changing the language to be more understandable.
 
 ## Technology :technologist:
 
