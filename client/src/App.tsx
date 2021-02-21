@@ -15,8 +15,6 @@ import Pools from './views/Pools'
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
 const NotFound = lazy(() => import('./views/NotFound'))
-const Teams = lazy(() => import('./views/Teams'))
-const Team = lazy(() => import('./views/Teams/Team'))
 
 // This config is required for number formating
 BigNumber.config({
@@ -57,12 +55,6 @@ const App: React.FC = () => {
             </Route>
             <Route path="/pools">
               <Pools />
-            </Route>
-            <Route exact path="/teams">
-              <Teams />
-            </Route>
-            <Route path="/teams/:id">
-              <Team />
             </Route>
             {/* Redirect */}
             <Route path="/staking">
