@@ -6,12 +6,12 @@ type Props = {
 }
 
 const Button = styled.button`
-  padding: 1.6rem 4rem;
-  border: 2px solid var(--dark);
-  background-color: ${(props: Props) => (props.primary ? 'var(--dark)' : 'transparent')};
-  color: ${(props: Props) => (props.primary ? 'white' : 'var(--dark)')};
+  padding: 1.3rem 3.3rem;
+  border: 2px solid var(--primary);
+  background-color: ${(props: Props) => (props.primary ? 'var(--primary)' : 'transparent')};
+  color: ${(props: Props) => (props.primary ? 'white' : 'var(--primary)')};
   border-radius: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.1rem;
