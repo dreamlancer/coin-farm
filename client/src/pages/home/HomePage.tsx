@@ -14,6 +14,8 @@ const StyledHomePage = styled.div`
   justify-content: space-between;
 `
 
+const
+
 const HomePage = () => {
   return (
     <StyledHomePage>
