@@ -2,6 +2,8 @@ import Header from 'components/Header'
 import React from 'react'
 import Button from 'style/Button'
 import styled from 'styled-components'
+import CakeStats from 'views/Home/components/CakeStats'
+import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import watermelon from '../../assets/watermelon.png'
 
 const StyledHomePage = styled.div`
@@ -46,7 +48,7 @@ const HeaderTextContainer = styled.div`
 `
 
 const HeaderText = styled.div`
-  color: var(--primary);
+  color: var(--main);
   font-weight: 600;
   font-size: 8rem;
   margin: 0 3rem;
@@ -61,10 +63,22 @@ const HeaderSubText = styled.div`
 
 const ButtonContainer = styled.div`
   display: flex;
-  margin-top: 5rem;
+  margin-top: 4rem;
 
   button:first-child {
     margin-right: 3rem;
+  }
+`
+
+const Cards = styled.div`
+  display: flex;
+
+  div:first-child {
+    margin-right: 3rem;
+  }
+
+  & > div {
+    min-width: 40rem;
   }
 `
 
@@ -86,6 +100,10 @@ const HomePage = () => {
           <Button>get seeds</Button>
         </ButtonContainer>
       </MainContainer>
+      <Cards>
+        <CakeStats />
+        <TotalValueLockedCard />
+      </Cards>
       <div />
     </StyledHomePage>
   )
