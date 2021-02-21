@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     --main: #50473c;
     --bg: #70a85a;
     --primary: #f35589;
-    --secondary: #ffbbb3
+    --secondary: #ffbbb3;
     --dark: #037844;
     --white: rgba(255,255,255,0.5);
   }
