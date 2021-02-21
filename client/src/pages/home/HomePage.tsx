@@ -1,7 +1,7 @@
 import Header from 'components/Header'
 import React from 'react'
+import Button from 'style/Button'
 import styled from 'styled-components'
-import FarmedStakingCard from 'views/Home/components/FarmStakingCard'
 import watermelon from '../../assets/watermelon.png'
 
 const StyledHomePage = styled.div`
@@ -14,6 +14,12 @@ const StyledHomePage = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+`
+
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   align-items: center;
 `
 
@@ -53,19 +59,33 @@ const HeaderSubText = styled.div`
   max-width: 70rem;
 `
 
+const ButtonContainer = styled.div`
+  display: flex;
+  margin-top: 5rem;
+
+  button:first-child {
+    margin-right: 3rem;
+  }
+`
+
 const HomePage = () => {
   return (
     <StyledHomePage>
       <Header />
-      <HeaderContainer>
-        <HeaderImage left src={watermelon} />
-        <HeaderTextContainer>
-          <HeaderText>Watermelon Farm</HeaderText>
-          <HeaderSubText>Your happy place to farm all the watermelons of your dreams</HeaderSubText>
-        </HeaderTextContainer>
-        <HeaderImage right src={watermelon} />
-      </HeaderContainer>
-      <FarmedStakingCard />
+      <MainContainer>
+        <HeaderContainer>
+          <HeaderImage left src={watermelon} />
+          <HeaderTextContainer>
+            <HeaderText>Watermelon Farm</HeaderText>
+            <HeaderSubText>Your happy place to farm all the watermelons of your dreams</HeaderSubText>
+          </HeaderTextContainer>
+          <HeaderImage right src={watermelon} />
+        </HeaderContainer>
+        <ButtonContainer>
+          <Button primary>get watermelons</Button>
+          <Button>get seeds</Button>
+        </ButtonContainer>
+      </MainContainer>
       <div />
     </StyledHomePage>
   )
