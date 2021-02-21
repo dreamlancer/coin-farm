@@ -19,7 +19,7 @@ const LogoContainer = styled.div`
 `
 
 const Logo = styled.img`
-  height: 4rem;
+  height: 3rem;
 `
 
 const LogoText = styled.div`
@@ -67,7 +67,7 @@ const Underline = styled.div`
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, -3.7rem);
+  transform: translate(-50%, -3.4rem);
   border-bottom-left-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 `
