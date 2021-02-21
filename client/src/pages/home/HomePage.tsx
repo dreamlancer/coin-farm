@@ -1,6 +1,7 @@
 import Header from 'components/Header'
 import React from 'react'
 import styled from 'styled-components'
+import FarmedStakingCard from 'views/Home/components/FarmStakingCard'
 import watermelon from '../../assets/watermelon.png'
 
 const StyledHomePage = styled.div`
@@ -64,6 +65,7 @@ const HomePage = () => {
         </HeaderTextContainer>
         <HeaderImage right src={watermelon} />
       </HeaderContainer>
+      <FarmedStakingCard />
       <div />
     </StyledHomePage>
   )
