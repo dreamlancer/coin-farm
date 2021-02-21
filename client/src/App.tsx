@@ -14,7 +14,6 @@ import Pools from './views/Pools'
 // Only pool is included in the main bundle because of it's the most visited page'
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
-const Ifos = lazy(() => import('./views/Ifos'))
 const NotFound = lazy(() => import('./views/NotFound'))
 const Teams = lazy(() => import('./views/Teams'))
 const Team = lazy(() => import('./views/Teams/Team'))
@@ -59,9 +58,6 @@ const App: React.FC = () => {
             </Route>
             <Route path="/pools">
               <Pools />
-            </Route>
-            <Route path="/ifo">
-              <Ifos />
             </Route>
             <Route exact path="/teams">
               <Teams />
