@@ -1,3 +1,4 @@
+import Header from 'components/Header'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -7,10 +8,19 @@ const StyledHomePage = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const HomePage = () => {
-  return <StyledHomePage>meow</StyledHomePage>
+  return (
+    <StyledHomePage>
+      <Header />
+      <div />
+    </StyledHomePage>
+  )
 }
 
 export default HomePage
