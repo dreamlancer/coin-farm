@@ -18,7 +18,6 @@ const StyledHomePage = styled.div`
 
 const HeaderContainer = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
 `
 
@@ -35,6 +34,7 @@ const HeaderImage = styled.img`
 
 const HeaderTextContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
 `
 
@@ -57,12 +57,12 @@ const HomePage = () => {
     <StyledHomePage>
       <Header />
       <HeaderContainer>
+        <HeaderImage left src={watermelon} />
         <HeaderTextContainer>
-          <HeaderImage left src={watermelon} />
           <HeaderText>Watermelon Farm</HeaderText>
-          <HeaderImage right src={watermelon} />
+          <HeaderSubText>Your happy place to farm all the watermelons of your dreams</HeaderSubText>
         </HeaderTextContainer>
-        <HeaderSubText>Your happy place to farm all the watermelons of your dreams</HeaderSubText>
+        <HeaderImage right src={watermelon} />
       </HeaderContainer>
       <div />
     </StyledHomePage>
