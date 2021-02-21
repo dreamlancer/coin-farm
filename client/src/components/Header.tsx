@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import watermelon from '../assets/watermelon.png'
 
@@ -22,7 +23,7 @@ const Logo = styled.img`
 `
 
 const LogoText = styled.div`
-  color: var(--primary);
+  color: var(--main);
   font-size: 2.2rem;
   margin-left: 1rem;
   text-transform: capitalize;
@@ -37,26 +38,38 @@ const NavContainer = styled.div`
   transform: translateX(-50%);
 `
 
+type NavItemProps = {
+  active: boolean
+}
+
 const NavItem = styled.a`
   font-size: 1.7rem;
   font-weight: 600;
-  color: var(--primary);
-  padding: 0 1rem;
+  color: ${(props: NavItemProps) => (props.active ? 'var(--primary)' : 'var(--main)')};
+  padding: 0 2rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
+  text-transform: capitalize;
+
+  :hover {
+    color: var(--bg);
+  }
 `
 
 const Address = styled.div`
   padding: 0.5rem 1.6rem;
   border-radius: 1.7rem;
   font-size: 1.5rem;
-  background-color: var(--bg);
-  color: var(--main);
+  background-color: var(--light-primary);
+  color: var(--primary);
 `
 
 const Header = () => {
+  const location = useLocation()
+
   return (
     <StyledHeader>
       <LogoContainer>
@@ -64,11 +77,11 @@ const Header = () => {
         <LogoText>watermelon farm</LogoText>
       </LogoContainer>
       <NavContainer>
-        <NavItem>Home</NavItem>
-        <NavItem>Watermelon Store</NavItem>
-        <NavItem>Seed Store</NavItem>
-        <NavItem>Farm</NavItem>
-        <NavItem>About</NavItem>
+        <NavItem active={location.pathname === '/'}>home</NavItem>
+        <NavItem active={location.pathname === '/melon-market'}>melon market</NavItem>
+        <NavItem active={location.pathname === '/seed-store'}>seed store</NavItem>
+        <NavItem active={location.pathname === '/farms'}>farms</NavItem>
+        <NavItem active={location.pathname === '/about'}>about</NavItem>
       </NavContainer>
       <Address>0xd8...2C7f</Address>
     </StyledHeader>
