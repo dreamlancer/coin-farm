@@ -10,7 +10,7 @@ const StyledHomePage = styled.div`
 `
 
 const HomePage = () => {
-  return <StyledHomePage></StyledHomePage>
+  return <StyledHomePage>meow</StyledHomePage>
 }
 
 export default HomePage
