@@ -86,6 +86,7 @@ const Cards = styled.div`
     color: var(--main) !important;
     border: none !important;
     box-shadow: none !important;
+    align-items: flex-start;
   }
 
   & > * > * > * {
