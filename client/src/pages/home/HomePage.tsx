@@ -105,7 +105,7 @@ const Cards = styled.div`
       height: 0.3rem;
       background-color: var(--dark);
       left: 0;
-      bottom: -10px;
+      bottom: -8px;
     }
   }
 
