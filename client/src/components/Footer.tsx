@@ -2,7 +2,10 @@ import { Skeleton } from '@pancakeswap-libs/uikit'
 import React from 'react'
 import { usePriceCakeBusd } from 'state/hooks'
 import styled from 'styled-components'
-import watermelonToken from '../assets/watermelon-token.png'
+import watermelonToken from '../assets/watermelon-token-white.png'
+import twitter from '../assets/twitter.svg'
+import telegram from '../assets/telegram.svg'
+import medium from '../assets/medium.svg'
 
 const StyledFooter = styled.div`
   width: 100%;
@@ -36,6 +39,15 @@ const PriceText = styled.div`
   margin-left: 1rem;
 `
 
+const SocialContainer = styled.div`
+  display: flex;
+`
+
+const Social = styled.img`
+  height: 2rem;
+  margin-left: 2rem;
+`
+
 const Footer = () => {
   const cakePriceUsd = usePriceCakeBusd()
   return (
@@ -48,7 +60,17 @@ const Footer = () => {
       ) : (
         <Skeleton width={80} height={24} />
       )}
-      <div>meow</div>
+      <SocialContainer>
+        <a href="https://google.com/">
+          <Social src={twitter} />
+        </a>
+        <a href="https://google.com/">
+          <Social src={medium} />
+        </a>
+        <a href="https://google.com/">
+          <Social src={telegram} />
+        </a>
+      </SocialContainer>
     </StyledFooter>
   )
 }
