@@ -12,7 +12,7 @@ const StyledHeader = styled.div`
   align-items: center;
 `
 
-const LogoContainer = styled.div`
+const LogoContainer = styled.a`
   height: 100%;
   display: flex;
   align-items: center;
@@ -85,7 +85,7 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <LogoContainer>
+      <LogoContainer href="/">
         <Logo src={watermelon} />
         <LogoText>watermelon farm</LogoText>
       </LogoContainer>
