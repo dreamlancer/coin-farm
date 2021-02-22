@@ -90,7 +90,7 @@ const Header = () => {
         <LogoText>watermelon farm</LogoText>
       </LogoContainer>
       <NavContainer>
-        <NavItem active={location.pathname === '/'}>
+        <NavItem active={location.pathname === '/'} href="/">
           home
           {location.pathname === '/' && <Underline />}
         </NavItem>
