@@ -46,20 +46,18 @@ const App: React.FC = () => {
           <Route path="/" exact>
             <HomePage />
           </Route>
+          <Route path="/melon-market">
+            <HomePage />
+          </Route>
+          <Route path="/seed-store">
+            <HomePage />
+          </Route>
           <Route path="/farms">
-            <Farms />
+            <HomePage />
           </Route>
-          <Route path="/pools">
-            <Pools />
+          <Route path="/about">
+            <HomePage />
           </Route>
-          {/* Redirect */}
-          <Route path="/staking">
-            <Redirect to="/pools" />
-          </Route>
-          <Route path="/syrup">
-            <Redirect to="/pools" />
-          </Route>
-          {/* 404 */}
           <Route component={NotFound} />
         </Switch>
       </Suspense>
