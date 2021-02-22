@@ -92,12 +92,24 @@ const Header = () => {
       <NavContainer>
         <NavItem active={location.pathname === '/'}>
           home
-          <Underline />
+          {location.pathname === '/' && <Underline />}
         </NavItem>
-        <NavItem active={location.pathname === '/melon-market'}>melon market</NavItem>
-        <NavItem active={location.pathname === '/seed-store'}>seed store</NavItem>
-        <NavItem active={location.pathname === '/farms'}>farms</NavItem>
-        <NavItem active={location.pathname === '/about'}>about</NavItem>
+        <NavItem active={location.pathname === '/melon-market'} href="/melon-market">
+          melon market
+          {location.pathname === '/melon-market' && <Underline />}
+        </NavItem>
+        <NavItem active={location.pathname === '/seed-store'} href="/seed-store">
+          seed store
+          {location.pathname === '/seed-store' && <Underline />}
+        </NavItem>
+        <NavItem active={location.pathname === '/farms'} href="/farms">
+          farms
+          {location.pathname === '/farms' && <Underline />}
+        </NavItem>
+        <NavItem active={location.pathname === '/about'} href="/about">
+          about
+          {location.pathname === '/about' && <Underline />}
+        </NavItem>
       </NavContainer>
       <Address>0xd8...2C7f</Address>
     </StyledHeader>
