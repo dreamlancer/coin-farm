@@ -1,5 +1,6 @@
 import React, { useEffect, Suspense, lazy } from 'react'
 import HomePage from 'pages/home/HomePage'
+import MelonMarketPage from 'pages/melon-market/MelonMarketPage'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
@@ -7,7 +8,6 @@ import { useFetchProfile, useFetchPublicData } from 'state/hooks'
 import GlobalStyle from './style/Global'
 import ToastListener from './components/ToastListener'
 import PageLoader from './components/PageLoader'
-import Pools from './views/Pools'
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page'
@@ -47,7 +47,7 @@ const App: React.FC = () => {
             <HomePage />
           </Route>
           <Route path="/melon-market">
-            <HomePage />
+            <MelonMarketPage />
           </Route>
           <Route path="/seed-store">
             <HomePage />
