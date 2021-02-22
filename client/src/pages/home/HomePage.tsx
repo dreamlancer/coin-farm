@@ -95,7 +95,7 @@ const Cards = styled.div`
 
   & > * > * > h2:first-child {
     font-size: 40px;
-    color: var(--primary) !important;
+    color: var(--main) !important;
     position: relative;
     width: auto;
 
@@ -104,7 +104,7 @@ const Cards = styled.div`
       position: absolute;
       width: 100%;
       height: 0.3rem;
-      background-color: var(--dark);
+      background-color: var(--primary);
       left: 0;
       bottom: -8px;
     }
