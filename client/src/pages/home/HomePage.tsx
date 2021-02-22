@@ -1,6 +1,7 @@
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import Button from 'style/Button'
 import styled from 'styled-components'
 import CakeStats from 'views/Home/components/CakeStats'
@@ -116,6 +117,8 @@ const Cards = styled.div`
 `
 
 const HomePage = () => {
+  const history = useHistory()
+
   return (
     <StyledHomePage>
       <Header />
@@ -129,8 +132,10 @@ const HomePage = () => {
           <HeaderImage right src={watermelon} />
         </HeaderContainer>
         <ButtonContainer>
-          <Button primary>get watermelons</Button>
-          <Button>get seeds</Button>
+          <Button primary onClick={() => history.push('/melon-market')}>
+            get watermelons
+          </Button>
+          <Button onClick={() => history.push('/seed-store')}>get seeds</Button>
         </ButtonContainer>
       </MainContainer>
       <Cards>
