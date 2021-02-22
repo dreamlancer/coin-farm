@@ -80,6 +80,37 @@ const Cards = styled.div`
   & > div {
     min-width: 40rem;
   }
+
+  & > * {
+    color: var(--main) !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  & > * > * > * {
+    color: var(--main) !important;
+  }
+
+  & > * > * > h2:first-child {
+    font-size: 40px;
+    color: var(--primary) !important;
+    position: relative;
+    width: auto;
+
+    :after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0.3rem;
+      background-color: var(--dark);
+      left: 0;
+      bottom: -10px;
+    }
+  }
+
+  & > * > * > * > * {
+    color: var(--main) !important;
+  }
 `
 
 const HomePage = () => {
