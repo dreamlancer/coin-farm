@@ -2,6 +2,7 @@ import Footer from 'components/Footer'
 import Header from 'components/Header'
 import React from 'react'
 import styled from 'styled-components'
+import BuySell from './BuySell'
 
 const StyledMelonMarketPage = styled.div`
   position: fixed;
@@ -54,6 +55,7 @@ const MelonMarketPage = () => {
         <Market>
           <HeaderText>Buy Watermelons</HeaderText>
           <SubHeader>Buy some juicy watermelons with your other crypto tokens</SubHeader>
+          <BuySell />
         </Market>
         <Market>
           <HeaderText>Sell Watermelons</HeaderText>

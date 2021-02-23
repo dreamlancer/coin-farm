@@ -1,9 +1,8 @@
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { CardBody, ArrowDownIcon, Button, IconButton, Text } from '@pancakeswap-libs/uikit'
-import styled from 'styled-components'
 import { ArrowDown } from 'react-feather'
-import { ThemeContext } from 'styled-components'
+import styled, { ThemeContext } from 'styled-components'
 import { AutoColumn } from '../../components/Column'
 import CurrencyInputPanel from '../../components/CurrencyInputPanel'
 import AddressInputPanel from '../../components/AddressInputPanel'
@@ -43,7 +42,7 @@ import { isTradeBetter } from '../../data/V1'
 import { maxAmountSpend } from '../../utils/maxAmountSpend'
 import { computeTradePriceBreakdown, warningSeverity } from '../../utils/prices'
 import { TranslateString } from '../../utils/translateTextHelpers'
-import AppBody from '../../pages/AppBody'
+import AppBody from '../AppBody'
 
 const { main: Main } = TYPE
 
