@@ -23,7 +23,7 @@ const MarketContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  div:first-child {
+  & > div:first-child {
     border-right: solid 1px var(--dark);
   }
 `
