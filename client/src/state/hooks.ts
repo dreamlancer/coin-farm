@@ -25,9 +25,8 @@ export const useFetchPublicData = () => {
   const dispatch = useDispatch()
   const { slowRefresh } = useRefresh()
   useEffect(() => {
-    console.log('meow')
-    // dispatch(fetchFarmsPublicDataAsync());
-    // dispatch(fetchPoolsPublicDataAsync());
+    dispatch(fetchFarmsPublicDataAsync())
+    dispatch(fetchPoolsPublicDataAsync())
   }, [dispatch, slowRefresh])
 }
 
@@ -66,8 +65,7 @@ export const usePools = (account): Pool[] => {
   const dispatch = useDispatch()
   useEffect(() => {
     if (account) {
-      console.log('meow')
-      // dispatch(fetchPoolsUserDataAsync(account))
+      dispatch(fetchPoolsUserDataAsync(account))
     }
   }, [account, dispatch, fastRefresh])
 
@@ -163,7 +161,7 @@ export const useFetchProfile = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    // dispatch(fetchProfile(account))
+    dispatch(fetchProfile(account))
   }, [account, dispatch])
 }
 
