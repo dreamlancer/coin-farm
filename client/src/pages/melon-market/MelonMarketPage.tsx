@@ -48,6 +48,42 @@ const SubHeader = styled.h3`
   margin-bottom: 4rem;
 `
 
+const SwapContainer = styled.div`
+  width: 38rem;
+  & div {
+    border: none;
+    box-shadow: none;
+  }
+
+  div {
+    color: var(--main) !important;
+  }
+
+  input {
+    color: var(--main) !important;
+    ::placeholder {
+      color: var(--main) !important;
+    }
+  }
+
+  button {
+    color: var(--primary) !important;
+  }
+
+  & > div > div > div:last-child > div:first-child > div:nth-child(2) > div > div > button {
+    background-color: var(--light-primary) !important;
+
+    svg {
+      fill: var(--primary) !important;
+    }
+  }
+
+  & > div > div > div:last-child > div:last-child > button {
+    background-color: var(--primary) !important;
+    color: white !important;
+  }
+`
+
 const MelonMarketPage = () => {
   return (
     <StyledMelonMarketPage>
@@ -56,7 +92,9 @@ const MelonMarketPage = () => {
         <Market>
           <HeaderText>Melon Market</HeaderText>
           <SubHeader>Buy and Sell juicy watermelons with your other crypto tokens</SubHeader>
-          <Swap />
+          <SwapContainer>
+            <Swap />
+          </SwapContainer>
         </Market>
       </MarketContainer>
       <Footer />
