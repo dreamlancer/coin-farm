@@ -45,6 +45,7 @@ const SubHeader = styled.h3`
   font-size: 2rem;
   color: var(--main);
   font-weight: 600;
+  margin-bottom: 4rem;
 `
 
 const MelonMarketPage = () => {
