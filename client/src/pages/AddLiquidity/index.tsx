@@ -292,7 +292,7 @@ export default function AddLiquidity(props: Props) {
 
   return (
     <>
-      <CardNav activeIndex={1} />
+      {/* <CardNav activeIndex={1} /> */}
       <AppBody>
         <AddRemoveTabs adding />
         <Wrapper>
