@@ -1,6 +1,7 @@
 import React, { useEffect, Suspense, lazy } from 'react'
 import HomePage from 'pages/home/HomePage'
 import MelonMarketPage from 'pages/melon-market/MelonMarketPage'
+import SeedStorePage from 'pages/seed-store/SeedStorePage'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
@@ -50,7 +51,7 @@ const App: React.FC = () => {
             <MelonMarketPage />
           </Route>
           <Route path="/seed-store">
-            <HomePage />
+            <SeedStorePage />
           </Route>
           <Route path="/farms">
             <HomePage />
