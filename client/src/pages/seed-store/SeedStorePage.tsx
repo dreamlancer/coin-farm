@@ -3,6 +3,7 @@ import Header from 'components/Header'
 import AddLiquidity from 'pages/AddLiquidity'
 import React from 'react'
 import styled from 'styled-components'
+import BuySellSeed from './BuySellSeed'
 
 const StyledSeedStorePage = styled.div`
   position: fixed;
@@ -14,6 +15,12 @@ const StyledSeedStorePage = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+`
+
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const HeaderText = styled.h2`
@@ -33,9 +40,11 @@ const SeedStorePage = () => {
   return (
     <StyledSeedStorePage>
       <Header />
-      <HeaderText>Seed Store</HeaderText>
-      <SubHeader>Buy some seeds to help you farm your Watermelons</SubHeader>
-      <AddLiquidity currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" />
+      <HeaderContainer>
+        <HeaderText>Seed Store</HeaderText>
+        <SubHeader>Buy some seeds to help you farm your Watermelons</SubHeader>
+      </HeaderContainer>
+      <BuySellSeed currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" seed="diamond" />
       <Footer />
     </StyledSeedStorePage>
   )
