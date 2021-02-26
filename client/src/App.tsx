@@ -1,6 +1,7 @@
 import React, { useEffect, Suspense, lazy } from 'react'
 import HomePage from 'pages/home/HomePage'
 import MelonMarketPage from 'pages/melon-market/MelonMarketPage'
+import FarmsPage from 'pages/farms/FarmsPage'
 import SeedStorePage from 'pages/seed-store/SeedStorePage'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
@@ -54,7 +55,7 @@ const App: React.FC = () => {
             <SeedStorePage />
           </Route>
           <Route path="/farms">
-            <HomePage />
+            <FarmsPage />
           </Route>
           <Route path="/about">
             <HomePage />
