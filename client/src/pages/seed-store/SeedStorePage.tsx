@@ -45,6 +45,9 @@ const SeedStorePage = () => {
         <SubHeader>Buy some seeds to help you farm your Watermelons</SubHeader>
       </HeaderContainer>
       <BuySellSeed currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" seed="diamond" />
+      <BuySellSeed currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" seed="pink" />
+      <BuySellSeed currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" seed="gold" />
+      <BuySellSeed currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" seed="wood" />
       <Footer />
     </StyledSeedStorePage>
   )
