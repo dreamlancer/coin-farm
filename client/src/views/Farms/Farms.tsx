@@ -96,7 +96,6 @@ const Farms: React.FC = () => {
 
   return (
     <Page>
-      <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       <div>
         <Divider />
         <FlexLayout>
