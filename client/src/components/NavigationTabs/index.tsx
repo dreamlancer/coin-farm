@@ -44,7 +44,7 @@ const StyledAbsoluteLink = styled.a`
 `
 
 const StyledNavLink = styled(NavLink).attrs({
-  activeClassName
+  activeClassName,
 })`
   display: flex;
   flex-flow: row nowrap;

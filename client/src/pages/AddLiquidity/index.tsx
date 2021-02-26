@@ -13,6 +13,7 @@ import DoubleCurrencyLogo from 'components/DoubleLogo'
 import { AddRemoveTabs } from 'components/NavigationTabs'
 import { MinimalPositionCard } from 'components/PositionCard'
 import Row, { RowBetween, RowFlat } from 'components/Row'
+import styled from 'styled-components'
 
 import { PairState } from 'data/Reserves'
 import { useActiveWeb3React } from 'hooks'
@@ -36,15 +37,37 @@ import { ConfirmAddModalBottom } from './ConfirmAddModalBottom'
 import { PoolPriceBar } from './PoolPriceBar'
 import { ROUTER_ADDRESS } from '../../constants'
 
+const Container = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const Backdrop = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+`
+
 const { italic: Italic } = TYPE
 
 type Props = {
   currencyIdA: string
   currencyIdB: string
+  open: boolean
+  close: () => void
 }
 
 export default function AddLiquidity(props: Props) {
-  const { currencyIdA, currencyIdB } = props
+  const { currencyIdA, currencyIdB, open, close } = props
   const history = useHistory()
   const { account, chainId, library } = useActiveWeb3React()
   const currencyA = useCurrency(currencyIdA)
@@ -290,11 +313,14 @@ export default function AddLiquidity(props: Props) {
     setTxHash('')
   }, [onFieldAInput, txHash])
 
+  if (!open) return null
+
   return (
-    <>
+    <Container>
+      <Backdrop onClick={() => close()} />
       {/* <CardNav activeIndex={1} /> */}
       <AppBody>
-        <AddRemoveTabs adding />
+        {/* <AddRemoveTabs adding /> */}
         <Wrapper>
           <TransactionConfirmationModal
             isOpen={showConfirm}
@@ -439,6 +465,6 @@ export default function AddLiquidity(props: Props) {
           <MinimalPositionCard showUnwrapped={oneCurrencyIsWETH} pair={pair} />
         </AutoColumn>
       ) : null}
-    </>
+    </Container>
   )
 }
