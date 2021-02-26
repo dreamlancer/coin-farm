@@ -82,9 +82,8 @@ const SeedStorePage = () => {
       </HeaderContainer>
       <SeedContainer>
         <BuySellSeed currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" seed="diamond" />
-        <BuySellSeed currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" seed="pink" />
         <BuySellSeed currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" seed="gold" />
-        <BuySellSeed currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" seed="wood" />
+        <BuySellSeed currencyIdA="ETH" currencyIdB="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56" seed="pink" />
         <MoreComingSoon>
           <MoreContainer>
             <MoreIcon>?</MoreIcon>
@@ -92,6 +91,8 @@ const SeedStorePage = () => {
           </MoreContainer>
         </MoreComingSoon>
       </SeedContainer>
+      <div />
+      <div />
       <Footer />
     </StyledSeedStorePage>
   )
