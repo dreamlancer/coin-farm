@@ -17,6 +17,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/BUSD.png"
+    },
+    {
+      "name": "Watermelon Token",
+      "symbol": "MELON",
+      "address": "0xad6caeb32cd2c308980a548bd0bc5aa4306c6c18",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/watermelon-token-white.png"
     }
   ]
 }
