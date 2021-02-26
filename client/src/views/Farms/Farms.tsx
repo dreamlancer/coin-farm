@@ -97,7 +97,6 @@ const Farms: React.FC = () => {
   return (
     <Page>
       <div>
-        <Divider />
         <FlexLayout>
           <Route exact path={`${path}`}>
             {stackedOnly ? farmsList(stackedOnlyFarms, false) : farmsList(activeFarms, false)}
