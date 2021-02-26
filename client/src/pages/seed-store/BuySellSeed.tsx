@@ -2,6 +2,9 @@ import AddLiquidity from 'pages/AddLiquidity'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import diamond from '../../assets/diamond-seed.png'
+import wood from '../../assets/wood-seed.png'
+import gold from '../../assets/gold-seed.png'
+import pink from '../../assets/pink-seed.png'
 
 const StyledBuySellSeed = styled.div`
   position: relative;
@@ -59,6 +62,12 @@ const BuySellSeed = (props: Props) => {
     switch (seedName) {
       case 'diamond':
         return diamond
+      case 'wood':
+        return wood
+      case 'pink':
+        return pink
+      case 'gold':
+        return gold
       default:
         throw new Error('Seed not found')
     }
