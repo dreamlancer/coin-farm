@@ -33,7 +33,7 @@ const Name = styled.div`
   font-weight: 600;
   text-transform: capitalize;
 `
-const Button = styled.div`
+const Button = styled.button`
   width: 160px;
   height: 40px;
   border-radius: 10px;
@@ -46,6 +46,7 @@ const Button = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  cursor: pointer;
 `
 
 type Props = {
