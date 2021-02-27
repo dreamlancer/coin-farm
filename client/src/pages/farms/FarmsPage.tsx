@@ -47,7 +47,7 @@ const FarmsPage = () => {
       <Content>
         <HeaderContainer>
           <HeaderText>Watermelon Farms</HeaderText>
-          <SubHeader>Put your seeds to work and farm some watermelons! Yum</SubHeader>
+          <SubHeader>Plant your seeds and farm some watermelons! Yum</SubHeader>
         </HeaderContainer>
         <Farms />
       </Content>
