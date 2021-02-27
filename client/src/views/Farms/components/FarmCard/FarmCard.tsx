@@ -59,6 +59,7 @@ const StyledCardAccent = styled.div`
 `
 
 const FCard = styled.div`
+  width: 300px;
   align-self: baseline;
   background: ${(props) => props.theme.card.background};
   border-radius: 32px;
