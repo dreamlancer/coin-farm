@@ -32,7 +32,7 @@ const RainbowLight = keyframes`
 `
 
 const StyledCardAccent = styled.div`
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     rgba(255, 0, 0, 1) 0%,
     rgba(255, 154, 0, 1) 10%,
@@ -45,7 +45,7 @@ const StyledCardAccent = styled.div`
     rgba(186, 12, 248, 1) 80%,
     rgba(251, 7, 217, 1) 90%,
     rgba(255, 0, 0, 1) 100%
-  );
+  ); */
   background-size: 300% 300%;
   animation: ${RainbowLight} 2s linear infinite;
   border-radius: 16px;
