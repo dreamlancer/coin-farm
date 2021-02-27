@@ -19,6 +19,7 @@ const StyledFarmsPage = styled.div`
 const Content = styled.div`
   flex: 1;
   overflow-y: auto;
+  width: 100%;
 `
 
 const HeaderContainer = styled.div`
