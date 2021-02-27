@@ -106,10 +106,10 @@ const Header = () => {
           farms
           {location.pathname === '/farms' && <Underline />}
         </NavItem>
-        <NavItem active={location.pathname === '/about'} href="/about">
+        {/* <NavItem active={location.pathname === '/about'} href="/about">
           about
           {location.pathname === '/about' && <Underline />}
-        </NavItem>
+        </NavItem> */}
       </NavContainer>
       <Address>0xd8...2C7f</Address>
     </StyledHeader>
