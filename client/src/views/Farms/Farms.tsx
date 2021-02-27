@@ -95,19 +95,16 @@ const Farms: React.FC = () => {
   )
 
   return (
-    <Page>
-      <div>
-        <FlexLayout>
-          <Route exact path={`${path}`}>
-            {stackedOnly ? farmsList(stackedOnlyFarms, false) : farmsList(activeFarms, false)}
-          </Route>
-          <Route exact path={`${path}/history`}>
-            {farmsList(inactiveFarms, true)}
-          </Route>
-        </FlexLayout>
-      </div>
-      <Image src="/images/cakecat.png" alt="Pancake illustration" width={949} height={384} responsive />
-    </Page>
+    <div>
+      <FlexLayout>
+        <Route exact path={`${path}`}>
+          {stackedOnly ? farmsList(stackedOnlyFarms, false) : farmsList(activeFarms, false)}
+        </Route>
+        <Route exact path={`${path}/history`}>
+          {farmsList(inactiveFarms, true)}
+        </Route>
+      </FlexLayout>
+    </div>
   )
 }
 
