@@ -1,11 +1,19 @@
 pragma solidity 0.6.12;
 
+/*
+ * ApeSwapFinance 
+ * App:             https://apeswap.finance
+ * Medium:          https://medium.com/@ape_swap    
+ * Twitter:         https://twitter.com/ape_swap 
+ * Telegram:        https://t.me/ape_swap
+ * Announcements:   https://t.me/ape_swap_news
+ * GitHub:          https://github.com/ApeSwapFinance
+ */
+
 import '@pancakeswap/pancake-swap-lib/contracts/math/SafeMath.sol';
 import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/IBEP20.sol';
 import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/SafeBEP20.sol';
 import '@pancakeswap/pancake-swap-lib/contracts/access/Ownable.sol';
-
-// import "@nomiclabs/buidler/console.sol";
 
 interface IWBNB {
     function deposit() external payable;
@@ -27,9 +35,9 @@ contract BnbStaking is Ownable {
     // Info of each pool.
     struct PoolInfo {
         IBEP20 lpToken;           // Address of LP token contract.
-        uint256 allocPoint;       // How many allocation points assigned to this pool. CAKEs to distribute per block.
-        uint256 lastRewardBlock;  // Last block number that CAKEs distribution occurs.
-        uint256 accCakePerShare; // Accumulated CAKEs per share, times 1e12. See below.
+        uint256 allocPoint;       // How many allocation points assigned to this pool. BANANAs to distribute per block.
+        uint256 lastRewardBlock;  // Last block number that BANANAs distribution occurs.
+        uint256 accCakePerShare; // Accumulated BANANAs per share, times 1e12. See below.
     }
 
     // The REWARD TOKEN
@@ -42,7 +50,7 @@ contract BnbStaking is Ownable {
     // WBNB
     address public immutable WBNB;
 
-    // CAKE tokens created per block.
+    // BANANA tokens created per block.
     uint256 public rewardPerBlock;
 
     // Info of each pool.
@@ -53,9 +61,9 @@ contract BnbStaking is Ownable {
     uint256 public limitAmount = 10000000000000000000;
     // Total allocation poitns. Must be the sum of all allocation points in all pools.
     uint256 public totalAllocPoint = 0;
-    // The block number when CAKE mining starts.
+    // The block number when BANANA mining starts.
     uint256 public startBlock;
-    // The block number when CAKE mining ends.
+    // The block number when BANANA mining ends.
     uint256 public bonusEndBlock;
 
     event Deposit(address indexed user, uint256 amount);
@@ -184,8 +192,10 @@ contract BnbStaking is Ownable {
             }
         }
         if(msg.value > 0) {
+            // Deposits the BNB value of tx into WBNB
             IWBNB(WBNB).deposit{value: msg.value}();
             assert(IWBNB(WBNB).transfer(address(this), msg.value));
+            // Add the amount deposited to the user's balance
             user.amount = user.amount.add(msg.value);
         }
         user.rewardDebt = user.amount.mul(pool.accCakePerShare).div(1e12);
@@ -211,6 +221,7 @@ contract BnbStaking is Ownable {
         }
         if(_amount > 0) {
             user.amount = user.amount.sub(_amount);
+            // Withdraw the user's amont of BNB value from WBNB
             IWBNB(WBNB).withdraw(_amount);
             safeTransferBNB(address(msg.sender), _amount);
         }

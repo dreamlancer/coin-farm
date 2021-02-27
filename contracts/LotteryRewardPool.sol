@@ -1,22 +1,32 @@
 pragma solidity 0.6.12;
 
+/*
+ * ApeSwapFinance 
+ * App:             https://apeswap.finance
+ * Medium:          https://medium.com/@ape_swap    
+ * Twitter:         https://twitter.com/ape_swap 
+ * Telegram:        https://t.me/ape_swap
+ * Announcements:   https://t.me/ape_swap_news
+ * GitHub:          https://github.com/ApeSwapFinance
+ */
+
 import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/IBEP20.sol';
 import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/SafeBEP20.sol';
 import '@pancakeswap/pancake-swap-lib/contracts/access/Ownable.sol';
 
-import './MasterChef.sol';
+import './MasterApe.sol';
 
 contract LotteryRewardPool is Ownable {
     using SafeBEP20 for IBEP20;
 
-    MasterChef public chef;
+    MasterApe public chef;
     address public adminAddress;
     address public receiver;
     IBEP20 public lptoken;
     IBEP20 public cake;
 
     constructor(
-        MasterChef _chef,
+        MasterApe _chef,
         IBEP20 _cake,
         address _admin,
         address _receiver
