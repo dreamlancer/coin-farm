@@ -9,11 +9,16 @@ const StyledFarmsPage = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  overflow-y: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+`
+
+const Content = styled.div`
+  flex: 1;
+  overflow-y: auto;
 `
 
 const HeaderContainer = styled.div`
@@ -39,11 +44,13 @@ const FarmsPage = () => {
   return (
     <StyledFarmsPage>
       <Header />
-      <HeaderContainer>
-        <HeaderText>Watermelon Farms</HeaderText>
-        <SubHeader>Put your seeds to work and farm some watermelons! Yum</SubHeader>
-      </HeaderContainer>
-      <Farms />
+      <Content>
+        <HeaderContainer>
+          <HeaderText>Watermelon Farms</HeaderText>
+          <SubHeader>Put your seeds to work and farm some watermelons! Yum</SubHeader>
+        </HeaderContainer>
+        <Farms />
+      </Content>
       <Footer />
     </StyledFarmsPage>
   )
