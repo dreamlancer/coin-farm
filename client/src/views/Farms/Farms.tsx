@@ -13,6 +13,7 @@ import useRefresh from 'hooks/useRefresh'
 import { fetchFarmUserDataAsync } from 'state/actions'
 import { QuoteToken } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
+import { useActiveWeb3React } from 'hooks'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
@@ -23,7 +24,8 @@ const Farms: React.FC = () => {
   const farmsLP = useFarms()
   const cakePrice = usePriceCakeBusd()
   const bnbPrice = usePriceBnbBusd()
-  const { account, ethereum }: { account: string; ethereum: provider } = useWallet()
+  const { ethereum }: { account: string; ethereum: provider } = useWallet()
+  const { account } = useActiveWeb3React()
   const ethPriceUsd = usePriceEthBusd()
 
   const dispatch = useDispatch()
