@@ -16,6 +16,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
+    seed: 'wood',
   },
   {
     pid: 1,
@@ -31,6 +32,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
+    seed: 'diamond',
   },
   {
     pid: 2,
@@ -46,6 +48,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
+    seed: 'pink',
   },
   {
     pid: 14,
@@ -61,6 +64,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
+    seed: 'gold',
   },
 ]
 
