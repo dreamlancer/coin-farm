@@ -49,6 +49,21 @@ const Button = styled.button`
   cursor: pointer;
 `
 
+export const getIcon = (seedName: string) => {
+  switch (seedName) {
+    case 'diamond':
+      return diamond
+    case 'wood':
+      return wood
+    case 'pink':
+      return pink
+    case 'gold':
+      return gold
+    default:
+      throw new Error('Seed not found')
+  }
+}
+
 type Props = {
   currencyIdA: string
   currencyIdB: string
@@ -58,21 +73,6 @@ type Props = {
 const BuySellSeed = (props: Props) => {
   const { currencyIdA, currencyIdB, seed } = props
   const [open, setOpen] = useState(false)
-
-  const getIcon = (seedName: string) => {
-    switch (seedName) {
-      case 'diamond':
-        return diamond
-      case 'wood':
-        return wood
-      case 'pink':
-        return pink
-      case 'gold':
-        return gold
-      default:
-        throw new Error('Seed not found')
-    }
-  }
 
   return (
     <StyledBuySellSeed>

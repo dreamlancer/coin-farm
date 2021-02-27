@@ -43,7 +43,8 @@ const Farms: React.FC = () => {
   const stackedOnlyFarms = activeFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
-  // /!\ This function will be removed soon
+
+  // This function will be removed soon
   // This function compute the APY for each farm and will be replaced when we have a reliable API
   // to retrieve assets prices against USD
   const farmsList = useCallback(
@@ -90,6 +91,7 @@ const Farms: React.FC = () => {
           ethPrice={ethPriceUsd}
           ethereum={ethereum}
           account={account}
+          seed={farm.seed}
         />
       ))
     },

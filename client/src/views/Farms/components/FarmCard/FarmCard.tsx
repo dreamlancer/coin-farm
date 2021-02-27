@@ -69,6 +69,35 @@ const FCard = styled.div`
   padding: 24px;
   position: relative;
   text-align: center;
+
+  div {
+    color: var(--main) !important;
+  }
+  svg {
+    fill: var(--primary) !important;
+  }
+  path {
+    fill: var(--primary) !important;
+  }
+  button {
+    background-color: var(--primary);
+    &:not(:disabled):hover {
+      background-color: var(--primary) !important;
+    }
+  }
+  & > div:first-child > div:last-child {
+    h2 {
+      color: var(--primary) !important;
+    }
+    & > div:last-child {
+      div {
+        color: white !important;
+      }
+    }
+  }
+  & > div:nth-child(2) > div:last-child > button {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
 `
 
 const Divider = styled.div`
@@ -91,9 +120,19 @@ interface FarmCardProps {
   ethPrice?: BigNumber
   ethereum?: provider
   account?: string
+  seed?: string
 }
 
-const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethPrice, ethereum, account }) => {
+const FarmCard: React.FC<FarmCardProps> = ({
+  farm,
+  removed,
+  cakePrice,
+  bnbPrice,
+  ethPrice,
+  ethereum,
+  account,
+  seed,
+}) => {
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
@@ -139,13 +178,14 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
   return (
     <FCard>
-      {farm.tokenSymbol === 'CAKE' && <StyledCardAccent />}
+      {/* {farm.tokenSymbol === 'CAKE' && <StyledCardAccent />} */}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
         isCommunityFarm={isCommunityFarm}
         farmImage={farmImage}
         tokenSymbol={farm.tokenSymbol}
+        seed={seed}
       />
       {!removed && (
         <Flex justifyContent="space-between" alignItems="center">
