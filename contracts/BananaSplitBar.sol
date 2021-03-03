@@ -15,7 +15,7 @@ import "@pancakeswap/pancake-swap-lib/contracts/token/BEP20/BEP20.sol";
 import "./BananaToken.sol";
 
 // BananaSplitBar with Governance.
-contract BananaSplitBar is BEP20('BananaSplitBar Token', 'BANANASPLIT') {
+contract BananaSplitBar is BEP20('Watermelon Token', 'WATERMELON') {
     /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterApe).
     function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
@@ -149,9 +149,9 @@ contract BananaSplitBar is BEP20('BananaSplitBar Token', 'BANANASPLIT') {
         );
 
         address signatory = ecrecover(digest, v, r, s);
-        require(signatory != address(0), "BANANA::delegateBySig: invalid signature");
-        require(nonce == nonces[signatory]++, "BANANA::delegateBySig: invalid nonce");
-        require(now <= expiry, "BANANA::delegateBySig: signature expired");
+        require(signatory != address(0), "MELON::delegateBySig: invalid signature");
+        require(nonce == nonces[signatory]++, "MELON::delegateBySig: invalid nonce");
+        require(now <= expiry, "MELON::delegateBySig: signature expired");
         return _delegate(signatory, delegatee);
     }
 
@@ -181,7 +181,7 @@ contract BananaSplitBar is BEP20('BananaSplitBar Token', 'BANANASPLIT') {
         view
         returns (uint256)
     {
-        require(blockNumber < block.number, "BANANA::getPriorVotes: not yet determined");
+        require(blockNumber < block.number, "MELON::getPriorVotes: not yet determined");
 
         uint32 nCheckpoints = numCheckpoints[account];
         if (nCheckpoints == 0) {
@@ -254,7 +254,7 @@ contract BananaSplitBar is BEP20('BananaSplitBar Token', 'BANANASPLIT') {
     )
         internal
     {
-        uint32 blockNumber = safe32(block.number, "BANANA::_writeCheckpoint: block number exceeds 32 bits");
+        uint32 blockNumber = safe32(block.number, "MELON::_writeCheckpoint: block number exceeds 32 bits");
 
         if (nCheckpoints > 0 && checkpoints[delegatee][nCheckpoints - 1].fromBlock == blockNumber) {
             checkpoints[delegatee][nCheckpoints - 1].votes = newVotes;

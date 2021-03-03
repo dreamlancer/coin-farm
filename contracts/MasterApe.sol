@@ -224,7 +224,7 @@ contract MasterApe is Ownable {
     // Deposit LP tokens to MasterApe for BANANA allocation.
     function deposit(uint256 _pid, uint256 _amount) public validatePool(_pid) {
 
-        require (_pid != 0, 'deposit BANANA by staking');
+        require (_pid != 0, 'deposit MELON by staking');
 
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
@@ -245,7 +245,7 @@ contract MasterApe is Ownable {
 
     // Withdraw LP tokens from MasterApe.
     function withdraw(uint256 _pid, uint256 _amount) public validatePool(_pid) {
-        require (_pid != 0, 'withdraw BANANA by unstaking');
+        require (_pid != 0, 'withdraw MELON by unstaking');
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         require(user.amount >= _amount, "withdraw: not good");

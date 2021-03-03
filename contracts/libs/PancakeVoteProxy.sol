@@ -105,11 +105,11 @@ contract PancakeVoterProxy {
     }
 
     function name() external pure returns (string memory) {
-        return 'BANANASPLITVOTE';
+        return 'WATERMELONVOTE';
     }
 
     function symbol() external pure returns (string memory) {
-        return 'BANANASPLIT';
+        return 'WATERMELON';
     }
 
     function totalSupply() external view returns (uint256) {
